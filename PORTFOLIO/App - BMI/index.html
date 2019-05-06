@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BMI - calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: lightgreen;
+        font-size: 3rem;
+      }
+      main {
+        text-align: center;
+      }
+      main {
+        height: 100vh;
+        background: linear-gradient(
+            rgba(68, 64, 64, 0.5),
+            rgba(68, 64, 64, 0.5)
+          ),
+          url(fitBgc.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      input {
+        font-size: 2rem;
+        text-align: center;
+        border: 1px solid green;
+        width: 25vw;
+      }
+      #wynik {
+        display: none;
+        font-size: 2rem;
+        color: white;
+        width: 50vh;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #btn {
+        font-size: 2rem;
+        width: 30vh;
+      }
+      .img-container {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+      img {
+        align-self: flex-end;
+        margin: 10vh 0;
+        width: 60vw;
+      }
+      @media (max-width: 320px) {
+        img {
+          width: 100vw;
+          margin: 0;
+          height: 30vh;
+        }
+        input {
+          font-size: 1rem;
+        }
+      }
+      @media (max-width: 768px) {
+        img {
+          width: 100vw;
+          margin: 0;
+          height: 45vh;
+        }
+        input {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="col-12">Calculate your Body Mass Index</h1>
+      <div class="row">
+        <input
+          class="col-6"
+          id="waga"
+          type="number"
+          placeholder="Enter your weight in kilograms"
+        />
+        <input
+          class="col-6"
+          id="wzrost"
+          type="number"
+          placeholder="Enter your height in meters"
+        />
+      </div>
+      <button id="btn" class="btn btn-success btn-lg col-12 my-3">OK</button>
+      <div id="wynik" class="col-12 my-3"></div>
+      <div class="img-container col-12">
+        <img src="bmi-ranges.jpg" alt="" />
+      </div>
+    </main>
+    <script>
+      const btn = document.querySelector("#btn");
+      btn.addEventListener("click", function() {
+        let wynik = waga.value / Math.pow(wzrost.value, 2);
+        document.querySelector("#wynik").innerHTML = wynik.toFixed(2);
+        document.getElementById("wynik").style.display = "block";
+        if (wynik >= 30) {
+          document.getElementById("wynik").style.backgroundColor = "#D12124";
+        } else if (wynik >= 25) {
+          document.getElementById("wynik").style.backgroundColor = "#EF930A";
+        } else if (wynik >= 18.5) {
+          document.getElementById("wynik").style.backgroundColor = "#4DA93E";
+        } else {
+          document.getElementById("wynik").style.backgroundColor = "#36A5DD";
+        }
+      });
+    </script>
+  </body>
+</html>
