@@ -33,6 +33,7 @@ a {
 p {
   font-size: 2rem;
   font-weight: 300;
+  text-align: justify;
 }
 img {
   width: 100%;
@@ -209,7 +210,7 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("images/sticky-note.png");
+  background-image: url("images/sticky-note.webp");
   background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
@@ -272,20 +273,21 @@ li {
 /* Start Skills */
 .my-skills {
   margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 2.5rem;
   text-align: center;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 50% 50%;
+  grid-gap: 5%;
 }
 .skill {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  background-image: url("images/sticky-note.png");
+  background-image: url("images/sticky-note.webp");
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 30rem;
 }
 .skill h1 {
   text-transform: uppercase;
@@ -296,11 +298,13 @@ li {
   height: 10rem;
   margin: 6rem auto 4rem;
   display: flex;
-  background: url("images/sticky-note.png");
+  align-items: center;
+  justify-content: center;
+  background: url("images/sticky-note.webp");
 }
 .icon-container i {
   color: #000;
-  font-size: 10rem;
+  font-size: 12rem;
   margin: auto;
 }
 .fab.fa-html5 {
@@ -311,7 +315,7 @@ li {
 }
 .fab.fa-js-square {
   color: #ecef23;
-  background-image: url(images/black.png);
+  background-image: url(images/black.webp);
   background-size: 90% 80%;
   background-repeat: no-repeat;
   background-position: center;
@@ -338,24 +342,20 @@ li {
   background-color: #fff;
   background-image: linear-gradient(#ddd 2px, transparent 2px),
     linear-gradient(90deg, #ddd 2px, transparent 2px);
-  background-size: 45px 45px;
-  padding: 20px;
+  background-size: 40px 40px;
+  padding: 30px;
   height: 100%;
 }
 .portfolio-item:last-child {
   margin-bottom: 0;
 }
 .portfolio-description h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 300;
   margin: 1rem 0;
   color: black;
   font-weight: 600;
-}
-.portfolio-description h6 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 300;
+  text-align: center;
 }
 .portfolio-description .cta {
   display: inline-block;
@@ -423,6 +423,7 @@ li {
 }
 .copyright p {
   font-size: 1.4rem;
+  text-align: center;
 }
 /* End footer */
 
@@ -453,9 +454,14 @@ li {
     margin-top: 5rem;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .landing-text h6 {
     font-size: 3rem;
+  }
+  .my-skills {
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 30% 30% 30%;
+    grid-gap: 5% 10%;
   }
 }
 @media (max-width: 768px) {
@@ -568,6 +574,12 @@ li {
   }
   .landing-text h6 {
     font-size: 3rem;
+  }
+  .my-skills {
+    margin: 0 20px;
+    grid-template-columns: 100%;
+    grid-template-rows: 16%;
+    grid-gap: 1%;
   }
 }
 @media (max-width: 435px) {
