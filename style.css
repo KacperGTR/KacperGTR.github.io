@@ -404,42 +404,11 @@ li {
   color: #fff;
   font-family: arial;
 }
-.up {
-  position: fixed;
-  width: 5rem;
-  height: 5rem;
-  background-color: #eee;
-  bottom: 2.5rem;
-  right: 5rem;
-  border-radius: 100%;
-  display: flex;
-  animation: pulse 2s infinite;
-  cursor: pointer;
-}
-.up i {
-  color: #16162d;
-  font-size: 2rem;
-  margin: auto;
-}
 .copyright p {
   font-size: 1.4rem;
   text-align: center;
 }
 /* End footer */
-
-/* Start Animation */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.99);
-  }
-  70% {
-    box-shadow: 0 0 0 2rem rgba(0, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
-/* End Animation */
 
 /* Start Media Queries */
 @media (max-width: 1125px) {
