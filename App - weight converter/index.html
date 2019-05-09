@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Weight Calculator</title>
+    <title>Weight Converter</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,12 +17,17 @@
         padding: 0;
         box-sizing: border-box;
       }
-      body {
-        margin-top: 70px;
+      body,
+      html {
         background: #333;
         color: #fff;
         width: 100vw;
-        overflow: hidden;
+        height: 100vh;
+        overflow-x: hidden;
+      }
+      .form-group {
+        display: flex;
+        justify-content: space-around;
       }
       .card {
         border: none;
@@ -41,51 +46,58 @@
     <div id="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="display-4 text-center">Weight Calculator</h1>
+          <h1 class="display-4 text-center">Weight Converter</h1>
           <form>
             <div class="form-group text-center">
-              <div class="row">
-                <div class="col-sm-3 text-center">
-                  <input
-                    type="radio"
-                    id="pounds"
-                    value="pounds"
-                    name="weight"
-                  />
-                  <label for="pounds">Pounds</label>
-                </div>
-                <div class="col-sm text-center">
-                  <input
-                    type="radio"
-                    id="kilograms"
-                    value="kilograms"
-                    name="weight"
-                  />
-                  <label for="kilograms">Kilograms</label>
-                </div>
-                <div class="col-sm-3 text-center">
-                  <input type="radio" id="grams" value="grams" name="weight" />
-                  <label for="grams">Grams</label>
-                </div>
-                <div class="col-sm-3 text-center">
-                  <input
-                    type="radio"
-                    id="ounces"
-                    value="ounces"
-                    name="weight"
-                  />
-                  <label for="ounces">Ounces</label>
-                </div>
+              <div class=" text-center">
+                <input
+                  type="radio"
+                  id="pounds"
+                  value="pounds"
+                  name="weight"
+                  class="form-control"
+                />
+                <label for="pounds">Pounds</label>
               </div>
-              <input
-                id="MainInput"
-                type="number"
-                class="form-control form-control-lg"
-                placeholder="Choose measure..."
-              />
+              <div class="text-center">
+                <input
+                  type="radio"
+                  id="kilograms"
+                  value="kilograms"
+                  name="weight"
+                  class="form-control"
+                />
+                <label for="kilograms">grams</label>
+              </div>
+              <div class=" text-center">
+                <input
+                  type="radio"
+                  id="grams"
+                  value="grams"
+                  name="weight"
+                  class="form-control"
+                />
+                <label for="grams">Grams</label>
+              </div>
+              <div class=" text-center">
+                <input
+                  type="radio"
+                  id="ounces"
+                  value="ounces"
+                  name="weight"
+                  class="form-control"
+                />
+                <label for="ounces">Ounces</label>
+              </div>
             </div>
+            <input
+              id="MainInput"
+              type="number"
+              class="form-control form-control-lg"
+              placeholder="Choose measure..."
+            />
           </form>
-          <div class="mx-5" id="output">
+          <div class="m-5" id="output">
             <div class="card mx-auto mb-2">
               <div class="card-body bg-warning ">
                 <div class="row">

@@ -284,10 +284,16 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("images/sticky-note.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 30rem;
+  background-image: linear-gradient(145deg, #ffe95a 50%, rgb(247, 245, 136));
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.pin {
+  background-image: radial-gradient(red 50%, black 100%);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  justify-self: end;
 }
 .skill h1 {
   text-transform: uppercase;
@@ -296,7 +302,7 @@ li {
 .icon-container {
   width: 10rem;
   height: 10rem;
-  margin: 6rem auto 4rem;
+  margin: 2rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -376,7 +382,10 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 2.5rem;
   text-align: center;
-  background-color: #000;
+  background-color: #fff;
+  background-image: linear-gradient(#ddd 2px, transparent 2px),
+    linear-gradient(90deg, #ddd 2px, transparent 2px);
+  background-size: 40px 40px;
 }
 .contact-icon {
   display: flex;
@@ -386,29 +395,17 @@ li {
   padding: 2rem;
 }
 .contact-icon a {
-  color: #fff;
+  color: #000;
 }
 .contact-icon i {
-  font-size: 5rem;
+  font-size: 7rem;
+}
+.contact-icon a:hover,
+.contact-icon a:focus {
+  text-decoration: underline;
 }
 
 /* End Contact */
-
-/* Start footer */
-.copyright {
-  width: 100%;
-  text-align: center;
-  background-color: #00f;
-  padding: 1rem 0;
-  position: relative;
-  color: #fff;
-  font-family: arial;
-}
-.copyright p {
-  font-size: 1.4rem;
-  text-align: center;
-}
-/* End footer */
 
 /* Start Media Queries */
 @media (max-width: 1125px) {
